@@ -1,0 +1,39 @@
+.logoutButton{
+    cursor: pointer;
+    color: grey;
+}
+img{
+    width:70px;
+    height:70px;
+    margin: 5px 5px 6px 90px;
+}
+.navbar-brand{
+    font-size: 30px;
+    font-family: 'Dosis', sans-serif;
+}
+.container-fluid{
+    font-size: 18px;
+}
+.icon{
+   padding: 10px;
+}
+nav .navbar-nav li a{
+    color: white;
+    font-weight: bold;
+    text-transform:uppercase;
+    text-decoration-style: none;
+}
+nav .navbar-nav li a:hover{
+    color: black;
+    background-color: white;
+}
+nav{
+    background-color: #141414;
+
+}
+.logoutButton{
+    font-weight: bold;
+}
+.nav-item{
+    margin : 0 20px 0 20px;
+}

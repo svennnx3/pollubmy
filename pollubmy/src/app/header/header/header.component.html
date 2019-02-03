@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-md navbar-light sticky-top">
+  <div class="container-fluid">
+    <img src="../../../assets/logo-white.png" alt="logo">
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   <div class="collapse navbar-collapse" id="navbarContent">
+     <ul class="navbar-nav ml-auto">
+      <ng-template [ngIf]="!loginService.isLoggedIn()">
+          <li class="nav-item active">
+              <a href="#" class="nav-link" routerLink="/login">Zaloguj</a>
+            </li>
+            <li class="nav-item">
+             <a href="#" class="nav-link" routerLink="/register">Zarejestruj</a>
+           </li>
+      </ng-template> 
+        <li class="nav-item" >
+          <a role="button" class="userLogin" routerLink="/dashboard/details" *ngIf="loginService.isLoggedIn()">Witaj, <b>{{user?.firstName}}</b>!</a>
+        </li>   
+        <li class="nav-item" >
+          <a role="button" class="resources" routerLink="/dashboard/resources" *ngIf="loginService.isLoggedIn()">Materiały dydaktyczne</a>
+        </li> 
+        <li class="nav-item" >
+          <a role="button" class="lessons" routerLink="/dashboard/privatelessons" *ngIf="loginService.isLoggedIn()">Korepetycje</a>
+        </li> 
+        <li class="nav-item" >
+          <a role="button" class="userLogin" routerLink="/dashboard/posts" *ngIf="loginService.isLoggedIn()">Posty</a>
+        </li>
+        <li class="nav-item" >
+          <a role="button" class="logoutButton" (click)="loginService.logoutUser()" *ngIf="loginService.isLoggedIn()">Wyloguj się</a>
+        </li>  
+     </ul>
+   </div>
+  </div>
+</nav>
