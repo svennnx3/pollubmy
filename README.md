@@ -13,3 +13,4 @@ The main functionalities allows:
 •	Spring Data JPA.
 	All data connected  with users are stored in one of the most popular database MySQL. Spring Boot framework provides built-in Tomcat server which is helpful during run and test application.
 
+I was responsible for front-end side of this application using Angular 6.
